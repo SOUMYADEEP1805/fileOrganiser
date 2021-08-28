@@ -13,20 +13,25 @@ function organizeOutput(src){
     //1. input ---> dir given
     let newFolder;
     if(src == undefined){
-        console.log("Please provide the path.");
-    }else{
-        let isPresent = fs.existsSync(src);
-        if(isPresent){
+        // console.log("Please provide the path.");
+        src = process.cwd();
+    }
+       
+    // else{
+        // let isPresent = fs.existsSync(src);
+        // if(isPresent){
             //2.create or organize files in the dir
             newFolder = path.join(src, "OrganizedFile");
+            // }
             if(fs.existsSync(newFolder) == false){
                 fs.mkdirSync(newFolder);
             }
 
-        }else{
-            console.log("Please provide the correct path");
-        }
-    }
+        // }
+        // else{
+        //     console.log("Please provide the correct path");
+        // }
+    // }
 
     //3.identify categories of al the files present in that input dir
     organizer(src,newFolder);
@@ -74,6 +79,7 @@ function putFile(src,destination,category){
     let tobeCopied = path.basename(src);
     let destPath = path.join(fileCategoryPath, tobeCopied);
     fs.copyFileSync(src, destPath);
+    fs.unlinkSync(src);
 
     
 }

@@ -1,0 +1,23 @@
+{
+  "name": "node_file",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SOUMYADEEP1805/fileOrganiser.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SOUMYADEEP1805/fileOrganiser/issues"
+  },
+  "homepage": "https://github.com/SOUMYADEEP1805/fileOrganiser#readme",
+  "bin": {
+    "soumyaM": "main.js"
+  }
+}

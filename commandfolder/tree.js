@@ -4,7 +4,9 @@ let path = require("path");
 function treeOutput(src){
     // console.log("tree command executed with path " + src);
     if(src == undefined){
-     console.log("Please provide the path.");
+        // console.log("Please provide the path : ");
+        treeMaker(process.cwd(),"");
+        return;
      }else
      {
          let isPresent = fs.existsSync(src);
